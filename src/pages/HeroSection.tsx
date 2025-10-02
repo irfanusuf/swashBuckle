@@ -1,60 +1,60 @@
 
 
 
-// type heroSectionProps =  {
+// // type heroSectionProps =  {
 
-import { useState } from "react"
+// import { useState } from "react"
 
-//     username : string
+// //     username : string
 
+// // }
+
+
+// interface heroSectionInterface  {
+//     username : string,
+//     age?: number
 // }
 
 
-interface heroSectionInterface  {
-    username : string,
-    age?: number
-}
-
-
-const HeroSection = ({username } : heroSectionInterface) => {
+// const HeroSection = ({username } : heroSectionInterface) => {
 
 
 
-    const [admin , setIsAdmin] = useState<boolean>(false)
+//     const [admin , setIsAdmin] = useState<boolean>(false)
 
-    const [post , setPost] = useState<string>("")
-
-
-    const [count, setCount] = useState<number>(0);
+//     const [post , setPost] = useState<string>("")
 
 
-    const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
+//     const [count, setCount] = useState<number>(0);
 
 
-    // setIsAdmin(3)  u cant pass number into boolean 
-
-    // setCount("sdnjfbvsdjh")   // u cant pass string in  number 
+//     const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
 
 
-    // setCount((count) => count + 1)    // correct
+//     // setIsAdmin(3)  u cant pass number into boolean 
 
-    setStatus("loading")
+//     // setCount("sdnjfbvsdjh")   // u cant pass string in  number 
+
+
+//     // setCount((count) => count + 1)    // correct
+
+//     setStatus("loading")
 
 
 
-    return (
-        <div>
+//     return (
+//         <div>
 
 
 
 
-          <h2> This is a  HeroSection </h2> 
-          <h3> Welcome {username}</h3>
+//           <h2> This is a  HeroSection </h2> 
+//           <h3> Welcome {username}</h3>
 
 
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default HeroSection
+// export default HeroSection

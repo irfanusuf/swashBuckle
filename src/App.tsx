@@ -1,4 +1,4 @@
-import HeroSection from "./pages/HeroSection"
+// import HeroSection from "./pages/HeroSection"
 
 
 
@@ -14,7 +14,7 @@ function App() {
 
       <h3>  This is the Child Component </h3>
 
-        <HeroSection username="irfan"/>
+        {/* <HeroSection username="irfan"/> */}
     </>
   )
 }
