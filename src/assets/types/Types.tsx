@@ -24,3 +24,28 @@ export interface Circle {
     radius: number,
     area?: number
 }
+
+
+
+ export  interface User {
+   
+    userId : string,
+    username: string,
+    email: string,
+    isAdmin: boolean,
+    role: string,
+    createdAt?: Date,
+    updatedAt?: Date,
+    loading : boolean
+}
+
+
+
+
+export interface userForm {
+    username ? :  string ,
+    email : string,
+    password : string
+}
+
+

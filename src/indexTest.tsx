@@ -175,9 +175,103 @@
 
 
 
+// type heroSectionProps =  {
+//     username : string
+
+// }
 
 
 
 
 
 
+
+    // const [admin, setIsAdmin] = useState<boolean>(false)
+
+    // const [user, setUser] = useState<User>()
+    // const  [product , setProduct] = useState()
+
+    // const [post, setPost] = useState<string>("")
+
+
+    // const [count, setCount] = useState<number>(0);
+
+
+    // const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
+
+
+    // // setIsAdmin(3) // u cant pass number into boolean 
+
+    // //  setCount("sdnjfbvsdjh")   // u cant pass string in  number 
+
+
+    // setCount((count) => count + 1)    // correct
+
+    // setStatus("loading")
+
+
+    // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     console.log(e)
+    // }
+
+
+    // const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+
+    //     console.log(e)
+    // }
+
+    // interface User {
+
+    //     username: string,
+    //     email: string,
+    //     profilePic: string,
+    //     isAdmin: boolean,
+    //     Role: string
+
+    // }
+
+
+
+    // const fetchUserData = async (url: string): Promise<User> => {
+    //     const res = await fetch(url);
+    //     if (res.status === 200) {
+    //         return await res.json() as Promise<User>
+    //     } else {
+    //         throw new Error("Network Error !")
+    //     }
+    // }
+
+
+    // const fetchProductData =  async (url) =>{
+
+    //     const res = await fetch(url)
+    //       if (res.status === 200) {
+    //         return await res.json() 
+
+    // }
+
+    // useEffect(()=>{
+
+    //     (()=>{
+
+    //         const productData =  await fetchProductData()
+
+    //         setProduct(productData)
+
+
+    //     })()
+
+
+    // })
+
+
+
+    // useEffect(
+    //     () => {
+    //         (async () => {
+    //             const data = await fetchUserData("sjhfgbsjhfgshdjgf")
+    //             setUser(data)
+    //         })()
+    //     }
+    // )
