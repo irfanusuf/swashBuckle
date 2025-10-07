@@ -1,34 +1,26 @@
-import axios from "axios"
-import type { User, userForm } from "../../assets/types/Types"
-import type { Action } from "@reduxjs/toolkit";
+
+import type { ApiResult, Dispatch, User, userForm } from "../../assets/types/Types"
 import { reqApi, reqApiFailure, userReqSuccess } from "../Reducers/UserReducer";
+import { axiosInstance } from "../../utils/axiosInstance";
 
 
-type Dispatch = React.Dispatch<Action>;
 
 
-
-type ApiResult<T> = {
-  success: boolean;
-  payload?: T;
-  message?: string;
-};
 
 export const handlRegister =
     (e: React.MouseEvent<HTMLButtonElement>, formBody: userForm) =>
-        async (dispatch: Dispatch): Promise<void> => {
 
+        async (dispatch : Dispatch ): Promise<void> => {
             e.preventDefault()
-
             try {
-                dispatch(reqApi)
-                const res = await axios.post<ApiResult<User>>("/api/user/register", formBody)
+                dispatch(reqApi())
+                const res = await axiosInstance.post<ApiResult<User>>("/api/user/register", formBody)
                 if (res.status === 200 && res.data.payload) {
+                    console.log(res.data.payload)
                     dispatch(userReqSuccess(res.data.payload))
                 }
-
             } catch (error) {
-                dispatch(reqApiFailure)
+                dispatch(reqApiFailure())
                 throw new Error("Network Error !")
             }
         }
@@ -44,14 +36,17 @@ export const handlLogin =
 
             try {
                 dispatch(reqApi)
-                const res = await axios.post("/api/user/login", formBody)
-                if (res.status === 200) {
-                    dispatch(userReqSuccess)
+                const res = await axiosInstance.post<ApiResult<User>>("/api/user/login", formBody)
+
+                if (res.status === 200 && res.data.payload) {
+                    dispatch(userReqSuccess(res.data.payload))
+                }else{
+                    throw new Error("Network Error !")
                 }
 
             } catch (error) {
-                dispatch(reqApiFailure)
-                throw new Error("Network Error !")
+                dispatch(reqApiFailure())
+                console.log(error)
             }
         }
 

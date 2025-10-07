@@ -1,3 +1,5 @@
+import type { Action } from "@reduxjs/toolkit"
+
 export type Admin = boolean
 export type Username = string
 
@@ -32,11 +34,13 @@ export interface Circle {
     userId : string,
     username: string,
     email: string,
-    isAdmin: boolean,
-    role: string,
+    role: number,
     createdAt?: Date,
     updatedAt?: Date,
-    loading : boolean
+    loading? : boolean,
+    profilePicUrl? : string,
+    phone? : string
+  
 }
 
 
@@ -49,3 +53,13 @@ export interface userForm {
 }
 
 
+
+
+export type Dispatch = React.Dispatch<Action>;
+
+
+
+export type ApiResult<T> = {
+  payload?: T;
+  message: string;
+};
