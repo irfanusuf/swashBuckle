@@ -32,8 +32,8 @@ export const userReducer = createReducer(intialState, (builder : ActionReducerMa
     })
 
     builder.addCase( userReqSuccess, (state, action ) => {
+        // state = action.payload
         Object.assign(state , action.payload)
-      
         state.loading = false
     })
 
