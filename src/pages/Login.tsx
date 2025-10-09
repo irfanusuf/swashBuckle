@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { userForm } from "../assets/types/Types"
+import type { userForm } from "../types/Types"
 import { handlLogin } from "../redux/Actions/UserActions"
 import { useDispatch } from "react-redux"
 
@@ -21,8 +21,6 @@ const Login = () => {
         <div>
 
             <form>
-
-             
 
                 <input
                     placeholder="Email"

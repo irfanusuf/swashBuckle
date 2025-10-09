@@ -47,10 +47,26 @@ export interface Circle {
 
 
 export interface userForm {
-    username ? :  string ,
-    email : string,
+    username ? :  string 
+    email : string
     password : string
 }
+
+
+
+export interface Product {
+  id: number;
+  image: string;
+  name: string;
+  price: string;
+  oldPrice: string;
+  sold: number;
+  rating: number;
+  onSale: boolean;
+  loading? : boolean
+}
+
+
 
 
 

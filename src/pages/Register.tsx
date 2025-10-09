@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { userForm } from "../assets/types/Types"
+import type { userForm } from "../types/Types"
 import { handlRegister } from "../redux/Actions/UserActions"
 import { useDispatch } from "react-redux"
 

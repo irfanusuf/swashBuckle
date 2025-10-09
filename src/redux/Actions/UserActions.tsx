@@ -1,5 +1,5 @@
 
-import type { ApiResult, Dispatch, User, userForm } from "../../assets/types/Types"
+import type { ApiResult, Dispatch, User, userForm } from "../../types/Types"
 import { reqApi, reqApiFailure, userReqSuccess } from "../Reducers/UserReducer";
 import { axiosInstance } from "../../utils/axiosInstance";
 
@@ -41,7 +41,9 @@ export const handlLogin =
                 const res = await axiosInstance.post<ApiResult<User>>("/api/user/login", formBody)
 
                 if (res.status === 200 && res.data.payload) {
+
                     dispatch(userReqSuccess(res.data.payload))
+
                 } else {
                     throw new Error("Network Error !")
                 }

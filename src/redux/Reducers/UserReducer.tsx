@@ -1,5 +1,5 @@
 import { createAction, createReducer, type ActionReducerMapBuilder } from "@reduxjs/toolkit"
-import type { User } from "../../assets/types/Types"
+import type { User } from "../../types/Types"
 
 
 
